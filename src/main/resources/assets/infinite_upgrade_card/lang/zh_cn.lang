@@ -1,0 +1,9 @@
+item.infinite_upgrade_card.infinite_upgrade.name=无限升级
+item.infinite_upgrade_card.super_infinite_upgrade.name=超高级无限升级
+item.infinite_upgrade_card.infinite_factory_installer.name=无限工厂安装器
+message.infinite_upgrade_card.no_upgrade_support=该机器不支持升级
+message.infinite_upgrade_card.upgrade_success=升级成功
+message.infinite_upgrade_card.no_tier_support=该机器不支持等级提升
+message.infinite_upgrade_card.already_ultimate=该机器已经是终极等级
+message.infinite_upgrade_card.factory_upgrade_success=工厂等级提升成功
+message.infinite_upgrade_card.factory_upgrade_failed=工厂等级提升失败

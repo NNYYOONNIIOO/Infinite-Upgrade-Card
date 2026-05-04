@@ -72,6 +72,59 @@ public class ItemInfiniteUpgrade extends Item {
                 setUpgradeCountDirect(component, Upgrade.ENERGY, energyCount);
             }
         }
+        
+        if (isSuper) {
+            applyAllOtherUpgrades(component);
+        }
+    }
+    
+    private void applyAllOtherUpgrades(TileComponentUpgrade component) {
+        for (Upgrade upgrade : Upgrade.values()) {
+            if (upgrade == Upgrade.SPEED || upgrade == Upgrade.ENERGY) {
+                continue;
+            }
+            
+            if (upgrade == Upgrade.ANCHOR) {
+                if (ModConfig.superInfiniteUpgradeAnchorEnabled && component.supports(upgrade)) {
+                    int count = getUpgradeCount(upgrade, ModConfig.superInfiniteUpgradeAnchorCount);
+                    if (count > 0) {
+                        setUpgradeCountDirect(component, upgrade, count);
+                    }
+                }
+                continue;
+            }
+            
+            if (component.supports(upgrade)) {
+                int count = getUpgradeCountFromConfig(upgrade);
+                if (count > 0) {
+                    setUpgradeCountDirect(component, upgrade, count);
+                }
+            }
+        }
+    }
+    
+    private int getUpgradeCountFromConfig(Upgrade upgrade) {
+        if (upgrade == Upgrade.FILTER) {
+            return getUpgradeCount(upgrade, ModConfig.superInfiniteUpgradeFilter);
+        } else if (upgrade == Upgrade.GAS) {
+            return getUpgradeCount(upgrade, ModConfig.superInfiniteUpgradeGas);
+        } else if (upgrade == Upgrade.MUFFLING) {
+            return getUpgradeCount(upgrade, ModConfig.superInfiniteUpgradeMuffling);
+        } else if (upgrade == Upgrade.STONE_GENERATOR) {
+            return getUpgradeCount(upgrade, ModConfig.superInfiniteUpgradeStoneGenerator);
+        }
+        return 0;
+    }
+    
+    private int getUpgradeCount(Upgrade upgrade, int configValue) {
+        if (configValue == -1) {
+            try {
+                return upgrade.getMaxInstalled();
+            } catch (Exception e) {
+                return 0;
+            }
+        }
+        return configValue;
     }
     
     private void setUpgradeCountDirect(TileComponentUpgrade component, Upgrade upgrade, int count) {

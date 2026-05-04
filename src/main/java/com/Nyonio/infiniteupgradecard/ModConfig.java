@@ -25,6 +25,30 @@ public class ModConfig {
     @Config.Comment("Energy upgrade count for Super Infinite Upgrade item")
     public static int superInfiniteUpgradeEnergy = 32;
     
+    @Config.Name("Super Infinite Upgrade Filter Count")
+    @Config.Comment("Filter upgrade count for Super Infinite Upgrade item. -1 means use max installable from Mekanism config")
+    public static int superInfiniteUpgradeFilter = -1;
+    
+    @Config.Name("Super Infinite Upgrade Gas Count")
+    @Config.Comment("Gas upgrade count for Super Infinite Upgrade item. -1 means use max installable from Mekanism config")
+    public static int superInfiniteUpgradeGas = -1;
+    
+    @Config.Name("Super Infinite Upgrade Muffling Count")
+    @Config.Comment("Muffling upgrade count for Super Infinite Upgrade item. -1 means use max installable from Mekanism config")
+    public static int superInfiniteUpgradeMuffling = -1;
+    
+    @Config.Name("Super Infinite Upgrade Stone Generator Count")
+    @Config.Comment("Stone Generator upgrade count for Super Infinite Upgrade item. -1 means use max installable from Mekanism config")
+    public static int superInfiniteUpgradeStoneGenerator = -1;
+    
+    @Config.Name("Super Infinite Upgrade Anchor Enabled")
+    @Config.Comment("Whether to install Anchor upgrade for Super Infinite Upgrade item. Default: false")
+    public static boolean superInfiniteUpgradeAnchorEnabled = false;
+    
+    @Config.Name("Super Infinite Upgrade Anchor Count")
+    @Config.Comment("Anchor upgrade count for Super Infinite Upgrade item when enabled. -1 means use max installable from Mekanism config")
+    public static int superInfiniteUpgradeAnchorCount = -1;
+    
     @Mod.EventBusSubscriber(modid = InfiniteUpgradeCard.MODID)
     private static class ConfigHandler {
         @SubscribeEvent

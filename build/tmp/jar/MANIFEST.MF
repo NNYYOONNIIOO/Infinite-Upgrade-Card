@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: infinite_upgrade_card
-Specification-Vendor: Nyonio
-Specification-Version: 1
-Implementation-Title: Infinite_Upgrade_Card
-Implementation-Version: 1.0
-Implementation-Vendor: Nyonio
-Implementation-Timestamp: 2026-05-02T21:58:14+0800
-

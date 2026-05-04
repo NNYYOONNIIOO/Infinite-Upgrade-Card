@@ -1,9 +1,0 @@
-item.infinite_upgrade_card.infinite_upgrade.name=Infinite Upgrade
-item.infinite_upgrade_card.super_infinite_upgrade.name=Super Infinite Upgrade
-item.infinite_upgrade_card.infinite_factory_installer.name=Infinite Factory Installer
-message.infinite_upgrade_card.no_upgrade_support=This machine does not support upgrades
-message.infinite_upgrade_card.upgrade_success=Upgrade successful
-message.infinite_upgrade_card.no_tier_support=This machine does not support tier upgrades
-message.infinite_upgrade_card.already_ultimate=This machine is already at Ultimate tier
-message.infinite_upgrade_card.factory_upgrade_success=Factory tier upgraded successfully
-message.infinite_upgrade_card.factory_upgrade_failed=Factory tier upgrade failed

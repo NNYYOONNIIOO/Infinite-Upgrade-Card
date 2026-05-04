@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "infinite_upgrade_card:items/infinite_factory_installer"
-  }
-}
